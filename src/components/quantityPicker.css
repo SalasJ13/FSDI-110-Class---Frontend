@@ -1,0 +1,14 @@
+.quantity-picker {
+  border: 1px solid;
+  border-radius: 2px;
+  border: none;
+}
+
+.quantity-picker button {
+  margin: 0 5px;
+}
+
+.quantity-picker label {
+  font-weight: bold;
+  color: black;
+}

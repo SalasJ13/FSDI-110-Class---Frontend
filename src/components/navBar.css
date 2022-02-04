@@ -1,0 +1,56 @@
+/*https://www.deepl.com/translator */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  /*height: 10vh;
+  width: 0vw;
+  position: absolute;*/
+  height: 3px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+nav .a-item {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #a0a0a0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 5px;
+}
+.a-item:before,
+.a-item:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: #18f08b;
+  transition: 0.5s;
+}
+.a-item:after {
+  left: 0;
+  bottom: -10px;
+}
+.a-item:before {
+  right: 0;
+  top: -10px;
+}
+.a-item:hover {
+  color: #271d1d;
+}
+.a-item:hover:after,
+.a-item:hover:before {
+  width: 100%;
+}
