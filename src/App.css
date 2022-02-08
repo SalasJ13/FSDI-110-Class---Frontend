@@ -2,9 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .logo {
+  height: 25vmin;
+  width: 1300px;
+}
+.App .portada {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  height: 70vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {

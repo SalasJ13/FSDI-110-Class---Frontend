@@ -1,0 +1,10 @@
+/*Boton */
+.todo-page .btn {
+  background-color: black;
+  border: 1px solid black;
+}
+.todo-page .btn:hover {
+  color: white;
+  background-color: #eb410c;
+  border: 1px solid #eb410c;
+}
