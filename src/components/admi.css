@@ -1,0 +1,29 @@
+.admi-container {
+  display: flex;
+}
+.admi-container .product {
+  flex: 2;
+}
+.admi-container .coupons {
+  flex: 1;
+}
+/*Formulario */
+.form {
+  width: 80%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.admi-container .form label {
+  display: inline-block;
+}
+.admi-container .forms input {
+  display: inline-block;
+  width: 50%;
+  height: 30px;
+}
+button {
+  padding: 0.4em 1em;
+  border: none;
+  cursor: pointer;
+}
