@@ -4,9 +4,8 @@ import { useContext } from "react";
 import storeContext from "../store/storeContext";
 
 
-`function NavBar(){`
 const NavBar = ()=>{
-    const [cart,user]=useContext(storeContext);
+    const {cart,user}=useContext(storeContext);
 
     return(
 
@@ -15,7 +14,7 @@ const NavBar = ()=>{
                 <a className="a-item"  href="/">Home</a>
                 <a className="a-item"  href="/catalog">Catalog</a>
                 <a className="a-item"  href="/about">About</a>
-                <a className="a-item"  href="/cart"><span className="badge bg-primary">{cart.length}</span> View Cart</a>
+                <a className="a-item"  href="/cart">View Cart: <span className="badge bg-secondary">{cart.length}</span></a>
             </nav>
             </div>
 

@@ -10,7 +10,7 @@ const GlobalState =(props)=>{
 
         let copy =[...myCart];
         copy.push(product);
-        setMyCart
+        setMyCart(copy);
     };
     
     const myRemoveToCart =(productId)=>{

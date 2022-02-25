@@ -13,6 +13,10 @@ const Admi = () => {
         copy.push(coupon);
         setAllCoupons(copy);
     };
+    const registerProduct = () => {
+        console.log("Registrado");
+    };
+    
     const codeChange = (e) =>{
         let copy ={...coupon} ;
         copy.code= e.target.value;
@@ -57,7 +61,7 @@ const Admi = () => {
                             <label className="form-label">Category:</label>
                             <input onClick={prodChange} name="category"  type="text" className="form-control" ></input>
                         </div>
-                            <button  className="btn btn-dark" >Register Product</button>
+                            <button onClick={registerProduct}  className="btn btn-dark" >Register Product</button>
                         </div>
                 </div>
                 <div className="coupons">

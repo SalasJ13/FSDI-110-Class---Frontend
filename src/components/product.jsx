@@ -1,5 +1,6 @@
 import QuantityPicker from './quantityPicker';
 import "./product.css"
+import "../service/dataService.js";
 import { useState, useContext } from 'react';
 import storeContext from '../store/storeContext';
 
@@ -9,7 +10,7 @@ const Product = (props) => {
 
 //crear una funcion que cambie el total
     const onQuantityChange=(value)=>{
-        console.log("qnty changed",value);
+        //console.log("qnty changed",value);
         setQuantity(value);
     };
 
@@ -22,9 +23,9 @@ const Product = (props) => {
         console.log("Pushing to cart",props.data.title);
         let prodToCart={
             ...props.data,
-            quantity:quantity
+            quantity:quantity,
         };
-        addProductToCart(prodToCart);
+        addProductToCart(props.data);
     }
     return(
 
