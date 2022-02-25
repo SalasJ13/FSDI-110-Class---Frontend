@@ -8,7 +8,6 @@ const Admi = () => {
 
     const saveCoupon=()=>{
         console.log('Guardado', coupon);
-
         //mostrar en la pagina
         let copy = [...allCoupons];
         copy.push(coupon);
@@ -58,7 +57,7 @@ const Admi = () => {
                             <label className="form-label">Category:</label>
                             <input onClick={prodChange} name="category"  type="text" className="form-control" ></input>
                         </div>
-                            <button onClick={saveCoupon} className="btn btn-dark" >Register Product</button>
+                            <button  className="btn btn-dark" >Register Product</button>
                         </div>
                 </div>
                 <div className="coupons">

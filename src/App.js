@@ -8,6 +8,7 @@ import About from "./components/about";
 import Home  from './components/home';
 import Cart from "./components/cart.jsx"
 import Admi from './components/admi';
+import GlobalState from './store/globalState';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -17,6 +18,7 @@ import {BrowserRouter,Route, Routes} from "react-router-dom";
 function App() {
   return (
     <div className="App">
+    <GlobalState>
       <BrowserRouter> 
         <img className='logo' src='./images/portada.gif'/>
         <NavBar/>
@@ -27,9 +29,11 @@ function App() {
             <Route path='/about'  element={<About/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/admi' element={<Admi/>}/>
+            
           </Routes>
         <Footer/>
       </BrowserRouter>
+    </GlobalState>
 
     </div>
   );
