@@ -6,7 +6,7 @@ const Home=()=>{
         <div className="home-page">
             <h1>Home</h1>
             <h2>Welcome to the Cheetos store</h2>
-            <Link className="btn btn-info btn-lg" to="/catalog">
+            <Link className="btn btn-dark" to="/catalog">
                 Go to the catalog
             </Link>
         </div>

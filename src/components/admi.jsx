@@ -1,10 +1,12 @@
-import { useState } from "react";
 import "./admi.css"
+import { useState } from "react";
+
 
 const Admi = () => {
+    const [product,setProduct]=useState({});
     const [coupon,setCoupon]=useState({});
     const [allCoupons,setAllCoupons]=useState([]);
-    const [product,setProduct]=useState({});
+
 
     const saveCoupon=()=>{
         console.log('Guardado', coupon);
@@ -13,30 +15,31 @@ const Admi = () => {
         copy.push(coupon);
         setAllCoupons(copy);
     };
-    const registerProduct = () => {
+    const saveProduct = () => {
         console.log("Registrado");
     };
     
     const codeChange = (e) =>{
+        console.log("code changed!"); 
         let copy ={...coupon} ;
         copy.code= e.target.value;
         setCoupon(copy);
     };
     const discountChange = (e) =>{
-        console.log(e)
+        console.log("discount changed!"); 
 
         let copy = {...coupon};
         copy.discount= parseFloat(e.target.value);
         setCoupon(copy);
-    }
+    };
     const prodChange = (e)=>{
         let name= e.target.name;
         let value=e.target.value;
 
-        let copy={...product};
+        let copy=[...product];
         copy[name]=value;
         setProduct(copy);
-    }
+    };
     return(
         <div className="admi-page">
             <h1>Management</h1>
@@ -51,17 +54,17 @@ const Admi = () => {
                         </div>
                         <div>
                             <label className="form-label">Image:</label>
-                            <input onClick={prodChange} name="image"  type="text" className="form-control" ></input>
+                            <input onClick={prodChange} name="imag"  type="text" className="form-control" ></input>
                         </div>
                         <div>
                             <label className="form-label">Price:</label>
-                            <input onClick={prodChange} name="price"  type="text" className="form-control" ></input>
+                            <input onClick={prodChange} name="price"  type="number" className="form-control" ></input>
                         </div>
                         <div>
                             <label className="form-label">Category:</label>
                             <input onClick={prodChange} name="category"  type="text" className="form-control" ></input>
                         </div>
-                            <button onClick={registerProduct}  className="btn btn-dark" >Register Product</button>
+                            <button onClick={saveCoupon}  className="btn btn-dark" >Register Product</button>
                         </div>
                 </div>
                 <div className="coupons">
@@ -77,11 +80,13 @@ const Admi = () => {
                         </div>
                         <button onClick={saveCoupon} className="btn btn-dark" >Register Coupon</button>
                     </div>
+
                 <h4>Valid Coupons</h4>
                 <ul>
-                    {allCoupons.map((c,index)=> (
-                    <li key={index}> {c.code}- {c.discount}%{""}</li>))}
+                    {allCoupons.map((c,index)=> 
+                    <li key={index}> {c.code} - {c.discount}%</li>)}
                 </ul>
+
                 </div>
             </div>
         </div>

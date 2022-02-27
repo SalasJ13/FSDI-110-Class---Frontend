@@ -1,1 +1,18 @@
+.home-page h1 {
+  position: absolute;
+  top: 220px;
+  left: 880px;
+}
+.home-page h2 {
+  position: absolute;
+  top: 290px;
+  left: 750px;
+  font-size: 33px;
+}
 
+.home-page .btn {
+  position: absolute;
+  top: 380px;
+  left: 850px;
+  font-size: 20px;
+}

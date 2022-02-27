@@ -3,7 +3,7 @@ import React from 'react';
 
 const storeContext = React.createContext({
     cart:[],
-    uesr:{},
+    user:{},
 
     addProductToCart:(product)=>{},
     removeProductFromCart:(productId)=>{}

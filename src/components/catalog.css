@@ -1,4 +1,4 @@
-.catalog h1 {
+/*.catalog h1 {
   position: absolute;
   top: 180px;
   left: 880px;
@@ -8,4 +8,15 @@
   top: 240px;
   left: 815px;
   font-size: 33px;
+}*/
+.catalog h1 {
+  position: absolute;
+  top: 220px;
+  left: 880px;
+}
+.catalog h4 {
+  position: absolute;
+  top: 290px;
+  left: 790px;
+  font-size: 39px;
 }

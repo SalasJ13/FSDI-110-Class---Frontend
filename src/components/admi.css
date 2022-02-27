@@ -27,3 +27,8 @@ button {
   border: none;
   cursor: pointer;
 }
+.admi-page h1 {
+  position: absolute;
+  top: 220px;
+  left: 880px;
+}

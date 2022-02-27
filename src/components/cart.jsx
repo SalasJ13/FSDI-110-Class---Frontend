@@ -1,22 +1,25 @@
 import { useContext, useState } from "react";
 import storeContext from "../store/storeContext";
-import Product from "./product";
+import "./cart.css";
+import CartItem from "./cartItem";
 
 const Cart = () => {
     const {cart}=useContext(storeContext);
 
     return(
-        <div className="page-cart">
-            <h1>Cart: {cart.length} Products</h1>
+        <div className="cart">
+            <h1>Page Cart</h1>
+            <h2>Cart: {cart.length} Products</h2>
             
             <div className="products">
             <ul>
-            {cart.map((prod,index) => (
-                <li key={(prod.id,index)}>{prod.title}</li>
+            {cart.map((prod) => (
+                <CartItem key={prod.id} data={prod}></CartItem>
             ))}
             </ul>
             </div>
         </div>
-    );
-};
+    )
+}
 export default Cart;
+///https://github.com/MikeSadler84/108organika/blob/master/src/components/cart.jsx

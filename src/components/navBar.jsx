@@ -1,5 +1,5 @@
 import "./navBar.css";
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { useContext } from "react";
 import storeContext from "../store/storeContext";
 
@@ -11,10 +11,10 @@ const NavBar = ()=>{
 
             <div>
             <nav>
-                <a className="a-item"  href="/">Home</a>
-                <a className="a-item"  href="/catalog">Catalog</a>
-                <a className="a-item"  href="/about">About</a>
-                <a className="a-item"  href="/cart">View Cart: <span className="badge bg-secondary">{cart.length}</span></a>
+                <Link className="a-item"  to="/">Home</Link>
+                <Link className="a-item"  to="/catalog">Catalog</Link>
+                <Link className="a-item"  to="/about">About</Link>
+                <Link className="a-item"  to="/cart">View Cart: <span className="badge bg-secondary">{cart.length}</span></Link>
             </nav>
             </div>
 
