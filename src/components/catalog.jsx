@@ -7,15 +7,15 @@ import ToDo from "./todo";
 const Catalog = () => {
     const [products,setProducts]=useState([]);
     
-    const loadData=()=>{
+    const loadData = async () => {
         let service = new DataService();
-        let data = service.getCatalog();
+        let data = await service.getCatalog();
         setProducts(data);
     };
     
     useEffect(()=>{
         loadData();
-    });
+    },[]);
 
     return(
 

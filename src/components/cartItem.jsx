@@ -26,7 +26,7 @@ const CartItem = (props) =>{
                     <th>Total</th>
                     <th>Option</th>
                 </tr>
-                <tbody>
+            <tbody>
             <th><img className='img-container' src={props.data.img} alt="Product"/> </th>
 
             <th><h4>{props.data.title}</h4>            </th>

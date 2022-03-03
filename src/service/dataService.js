@@ -1,3 +1,5 @@
+import axios from "axios";
+
 var catalog = [
 
     {   
@@ -74,12 +76,25 @@ var catalog = [
     }
 
 ]
+
 class DataService{
+    async getCatalog(){
+        let response = await axios.get("http://127.0.0.1:5000/api/catalog")
+        console.log("test",response.data);
+        return response.data;
+        //return catalog;
+    };
+
+    registerProduct(){
+
+    };
+}
+/*class DataService{
     getCatalog(){
         return catalog;
     };
     registerProduct(){
 
     };
-}
+}*/
 export default DataService;
