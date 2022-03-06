@@ -77,7 +77,7 @@ var catalog = [
 
 ]
 
-class DataService{
+/*class DataService{
     async getCatalog(){
         let response = await axios.get("http://127.0.0.1:5000/api/catalog")
         console.log("test",response.data);
@@ -88,13 +88,22 @@ class DataService{
     registerProduct(){
 
     };
-}
-/*class DataService{
+}*/
+class DataService{
     getCatalog(){
         return catalog;
     };
-    registerProduct(){
 
-    };
-}*/
+    async getWeather(lat,lon){
+        let apiKey = "0493846199225133b7355d92d8f8b898";
+        let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        
+        let response = await axios.get(url);
+
+        return response.data;
+
+    }
+
+    registerProduct(){};
+}
 export default DataService;

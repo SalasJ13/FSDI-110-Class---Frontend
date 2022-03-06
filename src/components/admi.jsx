@@ -9,7 +9,7 @@ const Admi = () => {
 
 
     const saveCoupon=()=>{
-        console.log('Guardado', coupon);
+        console.log("se guardo el cupon",coupon);
         //mostrar en la pagina
         let copy = [...allCoupons];
         copy.push(coupon);
@@ -20,13 +20,13 @@ const Admi = () => {
     };
     
     const codeChange = (e) =>{
-        console.log("code changed!"); 
+        console.log("el codigo cambio"); 
         let copy ={...coupon} ;
         copy.code= e.target.value;
         setCoupon(copy);
     };
     const discountChange = (e) =>{
-        console.log("discount changed!"); 
+        console.log("el descuento cambio",e); 
 
         let copy = {...coupon};
         copy.discount= parseFloat(e.target.value);
@@ -64,7 +64,7 @@ const Admi = () => {
                             <label className="form-label">Category:</label>
                             <input onClick={prodChange} name="category"  type="text" className="form-control" ></input>
                         </div>
-                            <button onClick={saveCoupon}  className="btn btn-dark" >Register Product</button>
+                            <button onClick={saveProduct}  className="btn btn-dark" >Register Product</button>
                         </div>
                 </div>
                 <div className="coupons">
